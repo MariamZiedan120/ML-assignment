@@ -138,7 +138,7 @@ def submit():
     data_array = np.array(data_list).reshape(1, -1)
 
     pred = LG.predict(data_array)
-    res = "you have heart disease" if pred[0][0] == 1 else "you don't have heart disease"
+    res = "you have heart disease" if pred[0][0] == 0 else "you don't have heart disease"
     messagebox.showinfo("Detection", res)
 
 
